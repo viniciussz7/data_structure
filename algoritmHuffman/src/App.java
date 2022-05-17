@@ -12,7 +12,7 @@ public class App {
         String textoCodificado = "";
         String textoHuffman = "";
 
-        BufferedReader leitor = new BufferedReader(new FileReader("src/texto.txt"));
+        BufferedReader leitor = new BufferedReader(new FileReader("data_structure/algoritmHuffman/src/texto.txt"));
         String temp;
         while ((temp = leitor.readLine()) != null) {
             textoOriginal = textoOriginal + temp;
@@ -23,11 +23,11 @@ public class App {
 
         textoCodificado = applyHuff.codificar(textoOriginal);
 
-        ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream("src/textoHuffman.bin"));
+        ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream("data_structure/algoritmHuffman/src/textoHuffman.bin"));
         escritor.writeObject(textoCodificado);
         escritor.close();
 
-        ObjectInputStream leitorBin = new ObjectInputStream(new FileInputStream("src/textoHuffman.bin"));
+        ObjectInputStream leitorBin = new ObjectInputStream(new FileInputStream("data_structure/algoritmHuffman/src/textoHuffman.bin"));
         textoHuffman = leitorBin.readObject().toString();
         leitorBin.close();
 
