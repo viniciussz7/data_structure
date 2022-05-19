@@ -1,3 +1,7 @@
+//Aluno: Vinicius de Oliveira Souza
+//Ciencia da Computacao - III Semestre
+//AED
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
