@@ -45,11 +45,14 @@ public class Node implements Comparable<Node> {
         countFrequency++;
     }
 
+    //PASSO 3
     public void buildCodeMap(Map<Character, String> codemap, String code) {
+        //se for no folha, add no codemap o simbolo e a sequencia gerada ate entao
         if (isFolha()) {
             codemap.put(getSimbolo(), code);
             return;
         }
+        //se nao for, pecorre a arvore em profundidade add 0ou1 na sequencia gerada
         left.buildCodeMap(codemap, code+"0");
         right.buildCodeMap(codemap, code+"1");
     }

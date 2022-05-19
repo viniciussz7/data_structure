@@ -8,8 +8,10 @@ import java.io.ObjectOutputStream;
 public class App {
     public static void main(String[] args) throws Exception {
         Huff applyHuff = new Huff();
+
         String textoOriginal = "";
         String textoCodificado = "";
+        
         String textoHuffman = "";
 
         BufferedReader leitor = new BufferedReader(new FileReader("data_structure/algoritmHuffman/src/texto.txt"));
